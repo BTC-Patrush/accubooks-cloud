@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getProfitAndLoss, getBalanceSheet, formatCurrency, getAccountBalance } from '../services/accountingService';
+import { getProfitAndLoss, formatCurrency, getAccountBalance } from '../services/accountingService';
 import { KPICard } from '../components/KPICard';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
@@ -89,7 +89,7 @@ export const Dashboard: React.FC = () => {
                             paddingAngle={5}
                             dataKey="value"
                         >
-                        {liquidityData.map((entry, index) => (
+                        {liquidityData.map((_, index) => (
                             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                         ))}
                         </Pie>

@@ -1,5 +1,5 @@
 import { db } from './storage';
-import { AccountType, Transaction, LedgerEntry } from '../types';
+import { AccountType } from '../types';
 
 export const getAccountBalance = (accountId: string, endDate?: string): number => {
   const transactions = db.getTransactions();

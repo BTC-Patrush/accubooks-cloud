@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { db } from '../services/storage';
 import { generateId, formatCurrency } from '../services/accountingService';
-import { Transaction, TransactionType, Account, LedgerEntry } from '../types';
+import { Transaction, TransactionType, Account } from '../types';
 
 export const Transactions: React.FC = () => {
   const [transactions, setTransactions] = useState<Transaction[]>(db.getTransactions());

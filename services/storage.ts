@@ -9,9 +9,6 @@ const KEYS = {
   ITEMS: 'ab_items',
 };
 
-// Helper to delay for realism
-const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
-
 class StorageService {
   constructor() {
     this.init();
